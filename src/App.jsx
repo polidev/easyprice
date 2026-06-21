@@ -1,16 +1,11 @@
-import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router";
+import Calculator from "./pages/Calculator";
 
 function App() {
   return (
-    <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<div>Home</div>} />
-          <Route path="/about" element={<div>About</div>} />
-        </Routes>
-      </Suspense>
-    </>
+    <Routes>
+      <Route path="/" element={<Calculator />} />
+    </Routes>
   );
 }
 
