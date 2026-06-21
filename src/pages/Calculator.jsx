@@ -1,16 +1,6 @@
 import { useCalculator } from "../hooks/useCalculator";
 import PriceInput from "../components/PriceInput";
-
-function ResultRow({ label, value, isTotal }) {
-  return (
-    <div
-      className={`flex justify-between rounded-lg px-4 py-2 ${isTotal ? "bg-indigo-100 font-bold text-indigo-900" : "bg-gray-50 text-gray-800"}`}
-    >
-      <span>{label}</span>
-      <span>{value}</span>
-    </div>
-  );
-}
+import ResultRow from "../components/ResultRow";
 
 export default function Calculator() {
   const {
@@ -27,7 +17,7 @@ export default function Calculator() {
 
   return (
     <main className="mx-auto flex min-h-screen max-w-lg items-center justify-center px-4">
-      <div className="w-full space-y-6 rounded-2xl border border-gray-200 bg-white p-8 shadow-lg">
+      <div className="w-full my-4 space-y-6 rounded-2xl border border-gray-200 bg-white p-8 shadow-lg">
         <h1 className="text-2xl font-bold text-gray-900">Price Calculator</h1>
 
         <PriceInput
